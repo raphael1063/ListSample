@@ -10,7 +10,10 @@ import javax.inject.Inject
 @HiltViewModel
 class MainViewModel @Inject constructor(private val repository: Repository): BaseViewModel() {
 
-
+ init {
+     getUserInfo()
+     getUserRepo()
+ }
 
     private fun getUserInfo() {
         repository.getInfo("JakeWharton")
